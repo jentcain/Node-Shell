@@ -7,10 +7,8 @@ process.stdin.on("data", data => {
 
   if (cmd === "pwd") {
     require("./pwd")();
-
-  if (cmd = 'ls'){
-    require('./ls')();
-  }
+  } else if (cmd === 'ls'){
+    require('./ls');
   } else {
     process.stdout.write("You typed: " + cmd);
     process.stdout.write("\nprompt > ");
